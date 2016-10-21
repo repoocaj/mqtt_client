@@ -130,7 +130,6 @@ static const PORTS_CHANNEL led_port_channel_map[] =
 {
     PORT_CHANNEL_H,
     PORT_CHANNEL_H,
-    PORT_CHANNEL_H,
     PORT_CHANNEL_H
 };
 
@@ -152,8 +151,7 @@ static const PORTS_BIT_POS led_port_bit_pos_map[] =
 {
     PORTS_BIT_POS_0,
     PORTS_BIT_POS_1,
-    PORTS_BIT_POS_2,
-    PORTS_BIT_POS_11
+    PORTS_BIT_POS_2
 };
 
 // *****************************************************************************
@@ -174,8 +172,7 @@ static const BSP_LED_ACTIVE_LEVEL led_active_level_map[] =
 {
    BSP_LED_ACTIVE_HIGH,
    BSP_LED_ACTIVE_HIGH,
-   BSP_LED_ACTIVE_HIGH,
-   BSP_LED_ACTIVE_LOW
+   BSP_LED_ACTIVE_HIGH
 };
 
 // *****************************************************************************
@@ -305,6 +302,7 @@ void BSP_LEDOff(BSP_LED led)
         PLIB_PORTS_PinSet( PORTS_ID_0, led_port_channel_map[led], led_port_bit_pos_map[led] );
     }
 }
+
 // *****************************************************************************
 /* Function: 
     void BSP_USBVBUSSwitchStateSet(BSP_USB_VBUS_SWITCH_STATE state);
@@ -366,21 +364,13 @@ void BSP_USBVBUSPowerEnable(uint8_t port, bool enable)
     PLIB_PORTS_PinWrite( PORTS_ID_0, PORT_CHANNEL_B, PORTS_BIT_POS_5, enable );
 }
 
+
 // *****************************************************************************
 // *****************************************************************************
 // *****************************************************************************
 // Section: Interface Routines
 // *****************************************************************************
 // *****************************************************************************
-
-uint32_t __attribute__((nomips16)) ReadCoreTimer(void)
-{
-    uint32_t timer;
-
-    timer = __builtin_mfc0(9, 0);
-
-    return timer;
-}
 
 // *****************************************************************************
 /* Function: 
@@ -400,20 +390,6 @@ uint32_t __attribute__((nomips16)) ReadCoreTimer(void)
 
 void BSP_Initialize(void )
 {
-    /* Reset the Ethernet */
-    BSP_LEDOn(ETH_RST);
-
-    /* Delay for 100 uS.  ReadCoreTimer() increments at 1/2 the system clock,
-     * so at a system clock of 200 MHz, ReadCoreTimer() ticks every 10 nS.  To
-     * delay for 100 uS, we need to wait for 10,000 ticks (100,000 nS) to
-     * elapse.
-     */
-    volatile uint32_t i;
-    uint32_t end = ReadCoreTimer() + 10000;
-
-    for (i = ReadCoreTimer(); i < end; i = ReadCoreTimer())
-        ;
-
     /* Setup the USB VBUS Switch Control Pin */
     BSP_USBVBUSSwitchStateSet(BSP_USB_VBUS_SWITCH_STATE_DISABLE);
 
@@ -421,7 +397,6 @@ void BSP_Initialize(void )
     BSP_LEDOff(BSP_LED_1);
     BSP_LEDOff(BSP_LED_2);
     BSP_LEDOff(BSP_LED_3);
-    BSP_LEDOff(ETH_RST);
 }
 
 /*******************************************************************************
