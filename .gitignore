@@ -1,0 +1,45 @@
+#### SOFTWARE SECTION ####
+# MPLab files
+software/**/*.X/build
+software/**/*.X/debug
+software/**/*.X/dist
+software/**/*.X/*.log
+software/**/*.X/funclist
+software/**/*.X/*.obj
+software/**/*.X/nbproject/*.properties
+software/**/*.X/nbproject/*.mk
+software/**/*.X/nbproject/*.bash
+software/**/*.X/nbproject/private
+
+#### HARDWARE SECTION ####
+# Altium files
+hardware/altium/*.*
+!hardware/altium/*.SchDoc
+!hardware/altium/*.SchLib
+!hardware/altium/*.PcbDoc
+!hardware/altium/*.PrjPCB
+!hardware/altium/*.PcbLib
+!hardware/altium/*.pdf
+!hardware/altium/*.IntLib
+hardware/altium/**/_Previews/
+hardware/altium/**/__Previews/
+hardware/altium/**/History/
+hardware/altium/**/Project*Logs*/
+hardware/altium/**/Project*Outputs/*.REP
+hardware/altium/**/Project*Outputs/Status Report.Txt
+hardware/altium/**/Project*Outputs/*.apr
+hardware/altium/**/Project*Outputs/*.APR_LIB
+hardware/altium/**/Project*Outputs/*.htm*
+hardware/altium/**/Project*Outputs/*.$$$
+hardware/altium/**/Project*Outputs/*.drc
+hardware/altium/**/Project*Outputs/*.csv
+hardware/altium/**/Project*Outputs/*.LDP
+
+#### DOCUMENTS SECTION ####
+# LaTex files
+documents/**/src/*
+!documents/**/src/*.tex
+documents/**/pdf/*
+!documents/**/pdf/*.pdf
+/software/iot_ethernet_test_fw/firmware/iot_ethernet_test_fw.X/build/default/
+/software/iot_ethernet_test_fw/firmware/iot_ethernet_test_fw.X/dist/default/

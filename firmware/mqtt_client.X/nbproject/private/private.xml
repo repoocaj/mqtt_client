@@ -1,25 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/home/jeffc/microchip/harmony/v2_01b/third_party/tcpip/wolfmqtt/src/mqtt_client.c</file>
-            <file>file:/home/jeffc/microchip/harmony/v2_01b/third_party/rtos/FreeRTOS/Source/tasks.c</file>
-            <file>file:/home/jeffc/microchip/harmony/v2_01b/third_party/tcpip/wolfmqtt/wolfmqtt/mqtt_packet.h</file>
-            <file>file:/home/jeffc/microchip/harmony/v2_01b/apps/Gateway/firmware/src/main.c</file>
-            <file>file:/home/jeffc/microchip/harmony/v2_01b/apps/tcpip/wolfmqtt_client/firmware/src/system_config/default/system_config.h</file>
-            <file>file:/home/jeffc/microchip/harmony/v2_01b/framework/system/command/sys_command.h</file>
-            <file>file:/home/jeffc/microchip/harmony/v2_01b/apps/Gateway/firmware/src/system_config/gateway_bretford_beta/system_tasks.c</file>
-            <file>file:/home/jeffc/microchip/harmony/v2_01b/third_party/tcpip/wolfmqtt/wolfmqtt/mqtt_socket.h</file>
-            <file>file:/home/jeffc/microchip/harmony/v2_01b/apps/tcpip/wolfmqtt_client/firmware/src/system_config/default/framework/net/pres/net_pres_enc_glue.c</file>
-            <file>file:/home/jeffc/microchip/harmony/v2_01b/apps/tcpip/wolfmqtt_client/firmware/src/system_config/default/bsp/bsp.h</file>
-            <file>file:/home/jeffc/microchip/harmony/v2_01b/third_party/tcpip/wolfmqtt/src/mqtt_socket.c</file>
-            <file>file:/home/jeffc/microchip/harmony/v2_01b/apps/tcpip/wolfmqtt_client/firmware/src/system_config/default/bsp/bsp.c</file>
-            <file>file:/home/jeffc/microchip/harmony/v2_01b/third_party/tcpip/wolfmqtt/wolfmqtt/mqtt_types.h</file>
-            <file>file:/home/jeffc/microchip/harmony/v2_01b/apps/Gateway/firmware/src/network.h</file>
-            <file>file:/home/jeffc/microchip/harmony/v2_01b/apps/Gateway/firmware/src/network.c</file>
-            <file>file:/home/jeffc/microchip/harmony/v2_01b/framework/peripheral/ports/processor/ports_p32mz2048efm144.h</file>
-            <file>file:/home/jeffc/microchip/harmony/v2_01b/framework/tcpip/tcp.h</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

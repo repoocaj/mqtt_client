@@ -9,7 +9,7 @@
     <Processor name=""/>
     <Board name=""/>
     <ForceOptimization flag="true"/>
-    <MergeStrategy flag="USER_ALL"/>
+    <MergeStrategy flag="ALL"/>
   </General>
   <Manifest>
     <Files>
@@ -24,6 +24,10 @@
       <File>
         <Name>ecc.c</Name>
         <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>usb_device_local.h</Name>
+        <Path>Header Files/framework/usb/src</Path>
       </File>
       <File>
         <Name>sys_reset_mapping.h</Name>
@@ -50,6 +54,10 @@
         <Path>Source Files/third_party/wolfssl/wolfcrypt</Path>
       </File>
       <File>
+        <Name>usb_device.c</Name>
+        <Path>Source Files/framework/usb/src/dynamic</Path>
+      </File>
+      <File>
         <Name>mem_track.h</Name>
         <Path>Header Files/third_party/tcpip/wolfssl/wolfssl</Path>
       </File>
@@ -60,6 +68,10 @@
       <File>
         <Name>blake2-impl.h</Name>
         <Path>Header Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>sys_console_usb_cdc.c</Name>
+        <Path>Source Files/framework/system/console/src</Path>
       </File>
       <File>
         <Name>conf.h</Name>
@@ -166,10 +178,6 @@
         <Path>Header Files/third_party/tcpip/wolfssl/cyassl/openssl</Path>
       </File>
       <File>
-        <Name>drv_usart_variant_mapping.h</Name>
-        <Path>Header Files/framework/driver/usart/src</Path>
-      </File>
-      <File>
         <Name>chacha.h</Name>
         <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
       </File>
@@ -258,8 +266,16 @@
         <Path>Header Files/framework/crypto/src</Path>
       </File>
       <File>
+        <Name>usb_device.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
         <Name>aes_cbc.h</Name>
         <Path>Header Files/framework/tcpip/src/crypto</Path>
+      </File>
+      <File>
+        <Name>sys_console_usb_cdc_local.h</Name>
+        <Path>Header Files/framework/system/console/src</Path>
       </File>
       <File>
         <Name>sys_tmr_local.h</Name>
@@ -288,6 +304,10 @@
       <File>
         <Name>igmp_private.h</Name>
         <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>usb_cdc.h</Name>
+        <Path>Header Files/framework/usb</Path>
       </File>
       <File>
         <Name>zero_conf_multicast_dns.h</Name>
@@ -342,6 +362,10 @@
         <Path>Header Files/third_party/tcpip/wolfssl/cyassl/openssl</Path>
       </File>
       <File>
+        <Name>usb_common.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
         <Name>hmac.c</Name>
         <Path>Source Files/framework/crypto/src</Path>
       </File>
@@ -350,16 +374,16 @@
         <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
       </File>
       <File>
-        <Name>drv_usart_read_write.c</Name>
-        <Path>Source Files/framework/driver/usart/src/dynamic</Path>
-      </File>
-      <File>
         <Name>rabbit.h</Name>
         <Path>Header Files/framework/crypto/src</Path>
       </File>
       <File>
         <Name>sys_debug_local.h</Name>
         <Path>Header Files/framework/system/debug/src</Path>
+      </File>
+      <File>
+        <Name>usb_hub.h</Name>
+        <Path>Header Files/framework/usb</Path>
       </File>
       <File>
         <Name>dh.h</Name>
@@ -474,10 +498,6 @@
         <Path>Header Files/framework/net/pres</Path>
       </File>
       <File>
-        <Name>sys_console_uart.c</Name>
-        <Path>Source Files/framework/system/console/src</Path>
-      </File>
-      <File>
         <Name>hash.h</Name>
         <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/wolfcrypt</Path>
       </File>
@@ -582,10 +602,6 @@
         <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/openssl</Path>
       </File>
       <File>
-        <Name>sys_dma.h</Name>
-        <Path>Header Files/framework/system/dma</Path>
-      </File>
-      <File>
         <Name>sys_tmr.h</Name>
         <Path>Header Files/framework/system/tmr</Path>
       </File>
@@ -662,6 +678,10 @@
         <Path>Header Files/framework/tcpip/src/crypto</Path>
       </File>
       <File>
+        <Name>usb_device_cdc_acm.c</Name>
+        <Path>Source Files/framework/usb/src/dynamic</Path>
+      </File>
+      <File>
         <Name>tfm.h</Name>
         <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
       </File>
@@ -672,6 +692,10 @@
       <File>
         <Name>drv_ethmac.h</Name>
         <Path>Header Files/framework/driver/ethmac</Path>
+      </File>
+      <File>
+        <Name>usb_device_cdc.c</Name>
+        <Path>Source Files/framework/usb/src/dynamic</Path>
       </File>
       <File>
         <Name>crypto.c</Name>
@@ -762,10 +786,6 @@
         <Path>Source Files/third_party/wolfmqtt</Path>
       </File>
       <File>
-        <Name>drv_usart.h</Name>
-        <Path>Header Files/framework/driver/usart</Path>
-      </File>
-      <File>
         <Name>rand.h</Name>
         <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/openssl</Path>
       </File>
@@ -834,8 +854,8 @@
         <Path>Header Files/framework/tcpip</Path>
       </File>
       <File>
-        <Name>drv_usart.c</Name>
-        <Path>Source Files/framework/driver/usart/src/dynamic</Path>
+        <Name>usb_device_mapping.h</Name>
+        <Path>Header Files/framework/usb/src</Path>
       </File>
       <File>
         <Name>error-crypt.h</Name>
@@ -876,6 +896,10 @@
       <File>
         <Name>ipv6_private.h</Name>
         <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>usb_host_client_driver.h</Name>
+        <Path>Header Files/framework/usb</Path>
       </File>
       <File>
         <Name>sha256.c</Name>
@@ -1026,6 +1050,10 @@
         <Path>Header Files/framework/osal</Path>
       </File>
       <File>
+        <Name>usb_device_cdc.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
         <Name>ec25519.h</Name>
         <Path>Header Files/third_party/tcpip/wolfssl/cyassl/openssl</Path>
       </File>
@@ -1060,10 +1088,6 @@
       <File>
         <Name>error.c</Name>
         <Path>Source Files/framework/crypto/src</Path>
-      </File>
-      <File>
-        <Name>sys_console_uart.h</Name>
-        <Path>Header Files/framework/system/console/src</Path>
       </File>
       <File>
         <Name>iperf_manager.h</Name>
@@ -1250,6 +1274,10 @@
         <Path>Header Files/framework/tcpip/src</Path>
       </File>
       <File>
+        <Name>usb_device_cdc_local.h</Name>
+        <Path>Header Files/framework/usb/src</Path>
+      </File>
+      <File>
         <Name>mqtt_client.h</Name>
         <Path>Header Files/third_party/wolfmqtt</Path>
       </File>
@@ -1272,6 +1300,10 @@
       <File>
         <Name>certs_test.h</Name>
         <Path>Header Files/third_party/tcpip/wolfssl/cyassl</Path>
+      </File>
+      <File>
+        <Name>drv_usb.h</Name>
+        <Path>Header Files/framework/driver/usb</Path>
       </File>
       <File>
         <Name>pkcs7.h</Name>
@@ -1320,10 +1352,6 @@
       <File>
         <Name>aes.h</Name>
         <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
-      </File>
-      <File>
-        <Name>drv_usart_local.h</Name>
-        <Path>Header Files/framework/driver/usart/src</Path>
       </File>
       <File>
         <Name>misc.c</Name>
@@ -1458,6 +1486,10 @@
         <Path>Source Files/third_party/wolfssl/wolfcrypt</Path>
       </File>
       <File>
+        <Name>drv_usbhs.h</Name>
+        <Path>Header Files/framework/driver/usb/usbhs</Path>
+      </File>
+      <File>
         <Name>mpi_class.h</Name>
         <Path>Header Files/third_party/wolfssl/wolfcrypt</Path>
       </File>
@@ -1468,6 +1500,10 @@
       <File>
         <Name>bio.h</Name>
         <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/openssl</Path>
+      </File>
+      <File>
+        <Name>usb_chapter_9.h</Name>
+        <Path>Header Files/framework/usb</Path>
       </File>
       <File>
         <Name>random.h</Name>
@@ -1542,8 +1578,16 @@
         <Path>Source Files/framework/system/reset/src</Path>
       </File>
       <File>
+        <Name>usb_host.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
         <Name>ssl.c</Name>
         <Path>Source Files/third_party/wolfssl</Path>
+      </File>
+      <File>
+        <Name>usb_host_hub.h</Name>
+        <Path>Header Files/framework/usb</Path>
       </File>
       <File>
         <Name>sys_random.h</Name>
@@ -1614,6 +1658,10 @@
         <Path>Source Files/third_party/wolfssl</Path>
       </File>
       <File>
+        <Name>drv_usbhs.c</Name>
+        <Path>Source Files/framework/driver/usb/usbhs/src/dynamic</Path>
+      </File>
+      <File>
         <Name>drv_ethmac.c</Name>
         <Path>Source Files/framework/driver/ethmac</Path>
       </File>
@@ -1644,10 +1692,6 @@
       <File>
         <Name>http_net.h</Name>
         <Path>Header Files/framework/tcpip</Path>
-      </File>
-      <File>
-        <Name>drv_usart_buffer_queue.c</Name>
-        <Path>Source Files/framework/driver/usart/src/dynamic</Path>
       </File>
       <File>
         <Name>dh.h</Name>
@@ -1722,12 +1766,20 @@
         <Path>Source Files/framework/crypto/src</Path>
       </File>
       <File>
+        <Name>usb_billboard.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
         <Name>ripemd.c</Name>
         <Path>Source Files/third_party/wolfssl/wolfcrypt</Path>
       </File>
       <File>
         <Name>memory.h</Name>
         <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>drv_usbhs_variant_mapping.h</Name>
+        <Path>Header Files/framework/driver/usb/usbhs/src</Path>
       </File>
       <File>
         <Name>ossl_typ.h</Name>
@@ -1764,6 +1816,10 @@
       <File>
         <Name>ftp_private.h</Name>
         <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>usb_host_hub_interface.h</Name>
+        <Path>Header Files/framework/usb</Path>
       </File>
       <File>
         <Name>ge_operations.c</Name>
@@ -1818,8 +1874,16 @@
         <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/openssl</Path>
       </File>
       <File>
+        <Name>drv_usbhs_local.h</Name>
+        <Path>Header Files/framework/driver/usb/usbhs/src</Path>
+      </File>
+      <File>
         <Name>pem.h</Name>
         <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/openssl</Path>
+      </File>
+      <File>
+        <Name>drv_usbhs_device.c</Name>
+        <Path>Source Files/framework/driver/usb/usbhs/src/dynamic</Path>
       </File>
       <File>
         <Name>internal.h</Name>
@@ -1878,12 +1942,14 @@
       <Template>
         <Name>sys_ports_static.c</Name>
         <Path>Source Files/app/system_config/default/framework/system/ports/src</Path>
-        <Checksum>5AED533BC31F0E2092C605B16E33974F</Checksum>
+        <Checksum>3DFB0BC56732FDD6D5377CC83C754517</Checksum>
+        <ProjectFileChecksum>19FAC1CE1295F81E83E6F75118F54C50</ProjectFileChecksum>
       </Template>
       <Template>
         <Name>system_init.c</Name>
         <Path>Source Files/app/system_config/default</Path>
-        <Checksum>EE968E62AE2D24A2C6BC48739916CF83</Checksum>
+        <Checksum>6D2ECBA590E303C5F75A33DED443A39E</Checksum>
+        <ProjectFileChecksum>9EDCB2FA9D0DD12018C6C3CF45BC0EFD</ProjectFileChecksum>
       </Template>
       <Template>
         <Name>main.c</Name>
@@ -1893,27 +1959,31 @@
         <Name>config.h</Name>
         <Path>Header Files/app/system_config/default</Path>
         <Checksum>E65FCB45FC16DC47F55F2C5F9F95E16C</Checksum>
+        <ProjectFileChecksum>3507D5E1674BAAFE7ADD216D34CF7F5C</ProjectFileChecksum>
       </Template>
       <Template>
         <Name>net_pres_enc_glue.h</Name>
         <Path>Header Files/app/system_config/default/framework/net/pres</Path>
         <Checksum>3FDF1EF72050D3301433F2D1893EC89D</Checksum>
+        <ProjectFileChecksum>272494DAC6C8A64CC2A8AE691A2FD9B7</ProjectFileChecksum>
       </Template>
       <Template>
         <Name>system_definitions.h</Name>
         <Path>Header Files/app/system_config/default</Path>
-        <Checksum>AB73E4AD3E7CCF95CD8CCFBC1714B5EA</Checksum>
+        <Checksum>02F0D1743A421978DEB6B3B08A0ED61C</Checksum>
+        <ProjectFileChecksum>000CDD09C525C4C56A57D76561F9EA4E</ProjectFileChecksum>
       </Template>
       <Template>
         <Name>system_exceptions.c</Name>
         <Path>Source Files/app/system_config/default</Path>
         <Checksum>C111969CA43D6CEA1E9E33A6164E7AE0</Checksum>
+        <ProjectFileChecksum>9A01FE9BF461A08267472BB92EFE8947</ProjectFileChecksum>
       </Template>
       <Template>
         <Name>bsp.c</Name>
         <Path>Source Files/app/system_config/default/bsp</Path>
-        <Checksum>1D0F411EE1191D59E73E3C958ECB66B2</Checksum>
-        <ProjectFileChecksum>687DC3A05583877C53E5D365F2E05DF8</ProjectFileChecksum>
+        <Checksum>484C4932DEC522EEA21F797DD57BD120</Checksum>
+        <ProjectFileChecksum>C7727744BDBBD755348C65C040DEE64A</ProjectFileChecksum>
       </Template>
       <Template>
         <Name>app.c</Name>
@@ -1922,23 +1992,26 @@
       <Template>
         <Name>bsp.h</Name>
         <Path>Header Files/app/system_config/default/bsp</Path>
-        <Checksum>11159A07B16A6259FF9FF9047DD4C4F3</Checksum>
+        <Checksum>E017AA8C8159ABAA799137EE836935E8</Checksum>
+        <ProjectFileChecksum>8CBC1C1EE6F7DF18D33A31A37756C066</ProjectFileChecksum>
       </Template>
       <Template>
         <Name>system_tasks.c</Name>
         <Path>Source Files/app/system_config/default</Path>
-        <Checksum>84D560A15F51E604F5EAD9E29B965CB8</Checksum>
+        <Checksum>9060D33488B8C351C50FA31E3E662EEF</Checksum>
+        <ProjectFileChecksum>174A39C8454007108A99269C103D8AC7</ProjectFileChecksum>
       </Template>
       <Template>
         <Name>net_pres_enc_glue.c</Name>
         <Path>Source Files/app/system_config/default/framework/net/pres</Path>
         <Checksum>55E30EA7D4F2F3E990F9BF6632FE9134</Checksum>
-        <ProjectFileChecksum>14F66D8F99B79C9F24617B0156A7DF95</ProjectFileChecksum>
+        <ProjectFileChecksum>B6D10CDE64DB9EA7F1B76B796F5A327E</ProjectFileChecksum>
       </Template>
       <Template>
         <Name>system_config.h</Name>
         <Path>Header Files/app/system_config/default</Path>
-        <Checksum>173777802ADA859E949029CF13AB2DC5</Checksum>
+        <Checksum>47D67491C7E1205A0F118A1EEA90E774</Checksum>
+        <ProjectFileChecksum>BE691829F333D8311194CA4B33712059</ProjectFileChecksum>
       </Template>
       <Template>
         <Name>app.h</Name>
@@ -1947,20 +2020,22 @@
       <Template>
         <Name>system_interrupt.c</Name>
         <Path>Source Files/app/system_config/default</Path>
-        <Checksum>810D4433EDB81FBF221B5B966F5A4016</Checksum>
+        <Checksum>58866372E3C9E1F43F23476D89373FED</Checksum>
+        <ProjectFileChecksum>EA745DB5561C50E2F5A751838BA995B3</ProjectFileChecksum>
       </Template>
       <Template>
         <Name>sys_clk_static.c</Name>
         <Path>Source Files/app/system_config/default/framework/system/clk/src</Path>
         <Checksum>CC45A61DC821F2A45FBFD5EB0F76DD59</Checksum>
+        <ProjectFileChecksum>8AC924888C001A362DA099B123A745EF</ProjectFileChecksum>
       </Template>
     </Templates>
     <CompilerItems>
       <C32>
-        <Include value="/home/jeffc/microchip/harmony/v2_01b/apps/tcpip/wolfmqtt_client/firmware/src"/>
-        <Include value="/home/jeffc/microchip/harmony/v2_01b/apps/tcpip/wolfmqtt_client/firmware/src/system_config/default"/>
-        <Include value="/home/jeffc/microchip/harmony/v2_01b/framework"/>
-        <Include value="/home/jeffc/microchip/harmony/v2_01b/apps/tcpip/wolfmqtt_client/firmware/src/system_config/default/framework"/>
+        <Include value="/Users/c14848/microchip/harmony/v2_01b/apps/tcpip/wolfmqtt_client_mzef_sk/firmware/src"/>
+        <Include value="/Users/c14848/microchip/harmony/v2_01b/apps/tcpip/wolfmqtt_client_mzef_sk/firmware/src/system_config/default"/>
+        <Include value="/Users/c14848/microchip/harmony/v2_01b/framework"/>
+        <Include value="/Users/c14848/microchip/harmony/v2_01b/apps/tcpip/wolfmqtt_client_mzef_sk/firmware/src/system_config/default/framework"/>
         <Include value="../src/system_config/default/bsp"/>
         <Define value="HAVE_CONFIG_H"/>
         <Include value="../../../../../third_party/tcpip/wolfssl"/>
