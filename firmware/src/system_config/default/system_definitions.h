@@ -60,12 +60,14 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #include "system/tmr/sys_tmr.h"
 #include "system/reset/sys_reset.h"
 #include "driver/tmr/drv_tmr.h"
-#include "driver/usart/drv_usart.h"
 #include "system/ports/sys_ports.h"
 #include "system/debug/sys_debug.h"
 #include "system/command/sys_command.h"
+#include "driver/usb/usbhs/drv_usbhs.h"
+#include "usb/usb_device.h"
 
 
+#include "usb/usb_device_cdc.h"
 
 #include "tcpip/tcpip.h"
 #include "driver/ethmac/drv_ethmac.h"
@@ -110,9 +112,13 @@ typedef struct
     SYS_MODULE_OBJ  sysDevcon;
     SYS_MODULE_OBJ  sysTmr;
     SYS_MODULE_OBJ  drvTmr0;
-    SYS_MODULE_OBJ  drvUsart0;
     SYS_MODULE_OBJ  sysDebug;
     SYS_MODULE_OBJ  sysConsole0;
+    SYS_MODULE_OBJ  drvUSBObject;
+    
+    SYS_MODULE_OBJ  usbDevObject0;
+
+
     SYS_MODULE_OBJ  tcpip;
     SYS_MODULE_OBJ  netPres;
 
@@ -126,6 +132,7 @@ typedef struct
 // *****************************************************************************
 
 extern SYSTEM_OBJECTS sysObj;
+
 
 
 //DOM-IGNORE-BEGIN

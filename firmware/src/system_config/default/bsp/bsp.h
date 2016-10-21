@@ -159,8 +159,7 @@ typedef enum
 {
     BSP_LED_1 = 0,
     BSP_LED_2 = 1,
-    BSP_LED_3 = 2,
-    ETH_RST = 3
+    BSP_LED_3 = 2
 } BSP_LED;
 
 

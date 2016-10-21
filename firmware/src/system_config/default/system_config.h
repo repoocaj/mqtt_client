@@ -106,17 +106,19 @@ extern "C" {
 #define SYS_CONSOLE_OVERRIDE_STDIO
 #define SYS_CONSOLE_DEVICE_MAX_INSTANCES        2
 #define SYS_CONSOLE_INSTANCES_NUMBER            1
-#define SYS_CONSOLE_UART_IDX               DRV_USART_INDEX_0
-#define SYS_CONSOLE_UART_RD_QUEUE_DEPTH    1
-#define SYS_CONSOLE_UART_WR_QUEUE_DEPTH    64
-#define SYS_CONSOLE_BUFFER_DMA_READY
+#define SYS_CONSOLE_USB_CDC_INSTANCE       USB_DEVICE_CDC_INDEX_0
+#define SYS_CONSOLE_USB_CDC_COMM_BAUD_RATE 921600
+#define SYS_CONSOLE_USB_CDC_RD_QUEUE_DEPTH 1
+#define SYS_CONSOLE_USB_CDC_WR_QUEUE_DEPTH 128
+#define SYS_CONSOLE_USB_CDC_READ_BUFFER_SIZE   512
+#define SYS_CONSOLE_BUFFER_DMA_READY        __attribute__((coherent)) __attribute__((aligned(16)))
 
 
 
 /*** Debug System Service Configuration ***/
 #define SYS_DEBUG_ENABLE
 #define DEBUG_PRINT_BUFFER_SIZE       8192
-#define SYS_DEBUG_BUFFER_DMA_READY
+#define SYS_DEBUG_BUFFER_DMA_READY        __attribute__((coherent)) __attribute__((aligned(16)))
 #define SYS_DEBUG_USE_CONSOLE
 
 /*** Interrupt System Service Configuration ***/
@@ -140,7 +142,7 @@ extern "C" {
 #define SYS_PORT_B_CNEN         0x0000
 
 #define SYS_PORT_C_ANSEL        0x4FE1
-#define SYS_PORT_C_TRIS         0xFFFF
+#define SYS_PORT_C_TRIS         0x7FFF
 #define SYS_PORT_C_LAT          0x0000
 #define SYS_PORT_C_ODC          0x0000
 #define SYS_PORT_C_CNPU         0x0000
@@ -148,14 +150,14 @@ extern "C" {
 #define SYS_PORT_C_CNEN         0x0000
 
 #define SYS_PORT_D_ANSEL        0x0100
-#define SYS_PORT_D_TRIS         0xFFFF
+#define SYS_PORT_D_TRIS         0xF7FF
 #define SYS_PORT_D_LAT          0x0000
 #define SYS_PORT_D_ODC          0x0000
 #define SYS_PORT_D_CNPU         0x0000
 #define SYS_PORT_D_CNPD         0x0000
 #define SYS_PORT_D_CNEN         0x0000
 
-#define SYS_PORT_E_ANSEL        0xFF10
+#define SYS_PORT_E_ANSEL        0xFF90
 #define SYS_PORT_E_TRIS         0xFFFF
 #define SYS_PORT_E_LAT          0x0000
 #define SYS_PORT_E_ODC          0x0000
@@ -167,7 +169,7 @@ extern "C" {
 #define SYS_PORT_F_TRIS         0xFFFF
 #define SYS_PORT_F_LAT          0x0000
 #define SYS_PORT_F_ODC          0x0000
-#define SYS_PORT_F_CNPU         0x0000
+#define SYS_PORT_F_CNPU         0x0100
 #define SYS_PORT_F_CNPD         0x0000
 #define SYS_PORT_F_CNEN         0x0000
 
@@ -179,15 +181,15 @@ extern "C" {
 #define SYS_PORT_G_CNPD         0x0000
 #define SYS_PORT_G_CNEN         0x0000
 
-#define SYS_PORT_H_ANSEL        0x0010
+#define SYS_PORT_H_ANSEL        0x0000
 #define SYS_PORT_H_TRIS         0xF7F8
-#define SYS_PORT_H_LAT          0x0800
+#define SYS_PORT_H_LAT          0x0000
 #define SYS_PORT_H_ODC          0x0000
-#define SYS_PORT_H_CNPU         0x0800
+#define SYS_PORT_H_CNPU         0x0C00
 #define SYS_PORT_H_CNPD         0x0000
 #define SYS_PORT_H_CNEN         0x0000
 
-#define SYS_PORT_J_ANSEL        0x0800
+#define SYS_PORT_J_ANSEL        0x0000
 #define SYS_PORT_J_TRIS         0xFFFF
 #define SYS_PORT_J_LAT          0x0000
 #define SYS_PORT_J_ODC          0x0000
@@ -242,52 +244,7 @@ extern "C" {
 #define DRV_TMR_ASYNC_WRITE_ENABLE_IDX0     false
 #define DRV_TMR_POWER_STATE_IDX0            SYS_MODULE_POWER_RUN_FULL
 
- // *****************************************************************************
-/* USART Driver Configuration Options
-*/
-#define DRV_USART_INTERRUPT_MODE                    true
-
-#define DRV_USART_BYTE_MODEL_SUPPORT                false
-
-#define DRV_USART_READ_WRITE_MODEL_SUPPORT          true
-
-#define DRV_USART_BUFFER_QUEUE_SUPPORT              true
-
-#define DRV_USART_CLIENTS_NUMBER                    1
-#define DRV_USART_INSTANCES_NUMBER                  1
-
-#define DRV_USART_PERIPHERAL_ID_IDX0                USART_ID_4
-#define DRV_USART_OPER_MODE_IDX0                    DRV_USART_OPERATION_MODE_NORMAL
-#define DRV_USART_OPER_MODE_DATA_IDX0               
-#define DRV_USART_INIT_FLAG_WAKE_ON_START_IDX0      false
-#define DRV_USART_INIT_FLAG_AUTO_BAUD_IDX0          false
-#define DRV_USART_INIT_FLAG_STOP_IN_IDLE_IDX0       false
-#define DRV_USART_INIT_FLAGS_IDX0                   0
-#define DRV_USART_BRG_CLOCK_IDX0                    100000000
-#define DRV_USART_BAUD_RATE_IDX0                    115200
-#define DRV_USART_LINE_CNTRL_IDX0                   DRV_USART_LINE_CONTROL_8NONE1
-#define DRV_USART_HANDSHAKE_MODE_IDX0               DRV_USART_HANDSHAKE_NONE
-#define DRV_USART_XMIT_INT_SRC_IDX0                 INT_SOURCE_USART_4_TRANSMIT
-#define DRV_USART_RCV_INT_SRC_IDX0                  INT_SOURCE_USART_4_RECEIVE
-#define DRV_USART_ERR_INT_SRC_IDX0                  INT_SOURCE_USART_4_ERROR
-#define DRV_USART_XMIT_INT_VECTOR_IDX0              INT_VECTOR_UART4_TX
-#define DRV_USART_XMIT_INT_PRIORITY_IDX0            INT_PRIORITY_LEVEL1
-#define DRV_USART_XMIT_INT_SUB_PRIORITY_IDX0        INT_SUBPRIORITY_LEVEL0
-#define DRV_USART_RCV_INT_VECTOR_IDX0               INT_VECTOR_UART4_RX
-#define DRV_USART_RCV_INT_PRIORITY_IDX0             INT_PRIORITY_LEVEL1
-#define DRV_USART_RCV_INT_SUB_PRIORITY_IDX0         INT_SUBPRIORITY_LEVEL0
-#define DRV_USART_ERR_INT_VECTOR_IDX0               INT_VECTOR_UART4_FAULT
-#define DRV_USART_ERR_INT_PRIORITY_IDX0             INT_PRIORITY_LEVEL1
-#define DRV_USART_ERR_INT_SUB_PRIORITY_IDX0         INT_SUBPRIORITY_LEVEL0
-
-#define DRV_USART_XMIT_QUEUE_SIZE_IDX0              10
-#define DRV_USART_RCV_QUEUE_SIZE_IDX0               10
-
-
-#define DRV_USART_POWER_STATE_IDX0                  SYS_MODULE_POWER_RUN_FULL
-
-#define DRV_USART_QUEUE_DEPTH_COMBINED              20
-
+ 
 // *****************************************************************************
 // *****************************************************************************
 // Section: Middleware & Other Library Configuration
@@ -475,7 +432,6 @@ extern "C" {
                                                     TCPIP_ETH_OPEN_RMII |\
                                                     0
 #define TCPIP_EMAC_PHY_CONFIG_FLAGS     			\
-                                                    DRV_ETHPHY_CFG_RMII | \
                                                     DRV_ETHPHY_CFG_AUTO | \
                                                     0                                                    
 #define TCPIP_EMAC_PHY_LINK_INIT_DELAY  			500
@@ -528,7 +484,7 @@ extern "C" {
 /*** Network Configuration Index 0 ***/
 #define TCPIP_NETWORK_DEFAULT_INTERFACE_NAME 			"PIC32INT"
 #define TCPIP_IF_PIC32INT
-#define TCPIP_NETWORK_DEFAULT_HOST_NAME 			"MQTT_C_DEMO"
+#define TCPIP_NETWORK_DEFAULT_HOST_NAME 			"MCHPBOARD_E"
 #define TCPIP_NETWORK_DEFAULT_MAC_ADDR	 			0
 #define TCPIP_NETWORK_DEFAULT_IP_ADDRESS 			"0.0.0.0"
 #define TCPIP_NETWORK_DEFAULT_IP_MASK 				"255.255.255.0"
@@ -555,6 +511,77 @@ extern "C" {
 
 
 /*** IPv4 Configuration ***/
+
+/*** USB Driver Configuration ***/
+
+
+/* Enables Device Support */
+#define DRV_USBHS_DEVICE_SUPPORT      true
+
+/* Disable Device Support */
+#define DRV_USBHS_HOST_SUPPORT      false
+
+/* Maximum USB driver instances */
+#define DRV_USBHS_INSTANCES_NUMBER    1
+
+
+/* Interrupt mode enabled */
+#define DRV_USBHS_INTERRUPT_MODE      true
+
+
+/* Number of Endpoints used */
+#define DRV_USBHS_ENDPOINTS_NUMBER    3
+
+
+
+
+/*** USB Device Stack Configuration ***/
+
+
+
+
+
+
+
+
+
+
+/* The USB Device Layer will not initialize the USB Driver */
+#define USB_DEVICE_DRIVER_INITIALIZE_EXPLICIT
+
+/* Maximum device layer instances */
+#define USB_DEVICE_INSTANCES_NUMBER     1
+
+/* EP0 size in bytes */
+#define USB_DEVICE_EP0_BUFFER_SIZE      64
+
+
+
+
+
+
+
+
+
+
+/* Maximum instances of CDC function driver */
+#define USB_DEVICE_CDC_INSTANCES_NUMBER     1
+
+
+
+
+
+
+
+
+
+
+/* CDC Transfer Queue Size for both read and
+   write. Applicable to all instances of the
+   function driver */
+#define USB_DEVICE_CDC_QUEUE_DEPTH_COMBINED 6
+
+
 
 // *****************************************************************************
 /* BSP Configuration Options
@@ -587,12 +614,6 @@ extern "C" {
 #define BSP_LED_3On() PLIB_PORTS_PinSet(PORTS_ID_0, PORT_CHANNEL_H, PORTS_BIT_POS_2)
 #define BSP_LED_3Off() PLIB_PORTS_PinClear(PORTS_ID_0, PORT_CHANNEL_H, PORTS_BIT_POS_2)
 #define BSP_LED_3StateGet() PLIB_PORTS_PinGetLatched(PORTS_ID_0, PORT_CHANNEL_H, PORTS_BIT_POS_2)
-
-/*** Functions for ETH_RST pin ***/
-#define ETH_RSTToggle() PLIB_PORTS_PinToggle(PORTS_ID_0, PORT_CHANNEL_H, PORTS_BIT_POS_11)
-#define ETH_RSTOn() PLIB_PORTS_PinClear(PORTS_ID_0, PORT_CHANNEL_H, PORTS_BIT_POS_11)
-#define ETH_RSTOff() PLIB_PORTS_PinSet(PORTS_ID_0, PORT_CHANNEL_H, PORTS_BIT_POS_11)
-#define ETH_RSTStateGet() ~(PLIB_PORTS_PinGetLatched(PORTS_ID_0, PORT_CHANNEL_H, PORTS_BIT_POS_11))
 
 /*** Functions for BSP_SWITCH_1 pin ***/
 #define BSP_SWITCH_1StateGet() PLIB_PORTS_PinGet(PORTS_ID_0, PORT_CHANNEL_B, PORTS_BIT_POS_12)

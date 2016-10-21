@@ -57,7 +57,6 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #include <stdbool.h>                    // Defines true
 #include <stdlib.h>                     // Defines EXIT_FAILURE
 #include "system/common/sys_module.h"   // SYS function prototypes
-#include "system_definitions.h"
 
 // *****************************************************************************
 // *****************************************************************************
@@ -68,8 +67,6 @@ int main ( void )
 {
     /* Initialize all MPLAB Harmony modules, including application(s). */
     SYS_Initialize ( NULL );
-
-    SYS_CONSOLE_PRINT("MQTT Client App\r\n");
 
     while ( true )
     {

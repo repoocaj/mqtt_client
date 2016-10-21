@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/Users/c14848/microchip/harmony/v2_01b/apps/tcpip/jcooper_exosite_mqtt_client/firmware/src/system_config/default/bsp/bsp.c</file>
-            <file>file:/Users/c14848/microchip/harmony/v2_01b/framework/driver/ethmac/src/dynamic/drv_ethmac.c</file>
-            <file>file:/Users/c14848/microchip/harmony/v2_01b/apps/tcpip/jcooper_exosite_mqtt_client/firmware/src/system_config/default/bsp/bsp.h</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
