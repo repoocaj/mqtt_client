@@ -256,7 +256,7 @@ extern "C" {
 #define DRV_USART_CLIENTS_NUMBER                    1
 #define DRV_USART_INSTANCES_NUMBER                  1
 
-#define DRV_USART_PERIPHERAL_ID_IDX0                USART_ID_1
+#define DRV_USART_PERIPHERAL_ID_IDX0                USART_ID_4
 #define DRV_USART_OPER_MODE_IDX0                    DRV_USART_OPERATION_MODE_NORMAL
 #define DRV_USART_OPER_MODE_DATA_IDX0               
 #define DRV_USART_INIT_FLAG_WAKE_ON_START_IDX0      false
@@ -267,16 +267,16 @@ extern "C" {
 #define DRV_USART_BAUD_RATE_IDX0                    115200
 #define DRV_USART_LINE_CNTRL_IDX0                   DRV_USART_LINE_CONTROL_8NONE1
 #define DRV_USART_HANDSHAKE_MODE_IDX0               DRV_USART_HANDSHAKE_NONE
-#define DRV_USART_XMIT_INT_SRC_IDX0                 INT_SOURCE_USART_1_TRANSMIT
-#define DRV_USART_RCV_INT_SRC_IDX0                  INT_SOURCE_USART_1_RECEIVE
-#define DRV_USART_ERR_INT_SRC_IDX0                  INT_SOURCE_USART_1_ERROR
-#define DRV_USART_XMIT_INT_VECTOR_IDX0              INT_VECTOR_UART1_TX
+#define DRV_USART_XMIT_INT_SRC_IDX0                 INT_SOURCE_USART_4_TRANSMIT
+#define DRV_USART_RCV_INT_SRC_IDX0                  INT_SOURCE_USART_4_RECEIVE
+#define DRV_USART_ERR_INT_SRC_IDX0                  INT_SOURCE_USART_4_ERROR
+#define DRV_USART_XMIT_INT_VECTOR_IDX0              INT_VECTOR_UART4_TX
 #define DRV_USART_XMIT_INT_PRIORITY_IDX0            INT_PRIORITY_LEVEL1
 #define DRV_USART_XMIT_INT_SUB_PRIORITY_IDX0        INT_SUBPRIORITY_LEVEL0
-#define DRV_USART_RCV_INT_VECTOR_IDX0               INT_VECTOR_UART1_RX
+#define DRV_USART_RCV_INT_VECTOR_IDX0               INT_VECTOR_UART4_RX
 #define DRV_USART_RCV_INT_PRIORITY_IDX0             INT_PRIORITY_LEVEL1
 #define DRV_USART_RCV_INT_SUB_PRIORITY_IDX0         INT_SUBPRIORITY_LEVEL0
-#define DRV_USART_ERR_INT_VECTOR_IDX0               INT_VECTOR_UART1_FAULT
+#define DRV_USART_ERR_INT_VECTOR_IDX0               INT_VECTOR_UART4_FAULT
 #define DRV_USART_ERR_INT_PRIORITY_IDX0             INT_PRIORITY_LEVEL1
 #define DRV_USART_ERR_INT_SUB_PRIORITY_IDX0         INT_SUBPRIORITY_LEVEL0
 
@@ -472,8 +472,10 @@ extern "C" {
                                                     TCPIP_ETH_OPEN_100 |\
                                                     TCPIP_ETH_OPEN_10 |\
                                                     TCPIP_ETH_OPEN_MDIX_AUTO |\
+                                                    TCPIP_ETH_OPEN_RMII |\
                                                     0
 #define TCPIP_EMAC_PHY_CONFIG_FLAGS     			\
+                                                    DRV_ETHPHY_CFG_RMII | \
                                                     DRV_ETHPHY_CFG_AUTO | \
                                                     0                                                    
 #define TCPIP_EMAC_PHY_LINK_INIT_DELAY  			500
@@ -526,7 +528,7 @@ extern "C" {
 /*** Network Configuration Index 0 ***/
 #define TCPIP_NETWORK_DEFAULT_INTERFACE_NAME 			"PIC32INT"
 #define TCPIP_IF_PIC32INT
-#define TCPIP_NETWORK_DEFAULT_HOST_NAME 			"mqtt"
+#define TCPIP_NETWORK_DEFAULT_HOST_NAME 			"MQTT_C_DEMO"
 #define TCPIP_NETWORK_DEFAULT_MAC_ADDR	 			0
 #define TCPIP_NETWORK_DEFAULT_IP_ADDRESS 			"0.0.0.0"
 #define TCPIP_NETWORK_DEFAULT_IP_MASK 				"255.255.255.0"

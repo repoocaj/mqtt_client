@@ -9,7 +9,7 @@
     <Processor name=""/>
     <Board name=""/>
     <ForceOptimization flag="true"/>
-    <MergeStrategy flag="USER_ALL"/>
+    <MergeStrategy flag="ALL"/>
   </General>
   <Manifest>
     <Files>
@@ -1878,12 +1878,14 @@
       <Template>
         <Name>sys_ports_static.c</Name>
         <Path>Source Files/app/system_config/default/framework/system/ports/src</Path>
-        <Checksum>5AED533BC31F0E2092C605B16E33974F</Checksum>
+        <Checksum>24CE4B213F1EAF8625C1FBAEA50E275E</Checksum>
+        <ProjectFileChecksum>16BA8A1714523F530F54F1982F60C678</ProjectFileChecksum>
       </Template>
       <Template>
         <Name>system_init.c</Name>
         <Path>Source Files/app/system_config/default</Path>
-        <Checksum>EE968E62AE2D24A2C6BC48739916CF83</Checksum>
+        <Checksum>26120292F6E18D134474ABD4E03F277C</Checksum>
+        <ProjectFileChecksum>D537FD257178987F43C66849E7B4E9F3</ProjectFileChecksum>
       </Template>
       <Template>
         <Name>main.c</Name>
@@ -1893,27 +1895,31 @@
         <Name>config.h</Name>
         <Path>Header Files/app/system_config/default</Path>
         <Checksum>E65FCB45FC16DC47F55F2C5F9F95E16C</Checksum>
+        <ProjectFileChecksum>BA192C2CB5E93CB98E15206AA8FA5A51</ProjectFileChecksum>
       </Template>
       <Template>
         <Name>net_pres_enc_glue.h</Name>
         <Path>Header Files/app/system_config/default/framework/net/pres</Path>
         <Checksum>3FDF1EF72050D3301433F2D1893EC89D</Checksum>
+        <ProjectFileChecksum>64208CFF720C608A9C0A31D7C7EEFF4E</ProjectFileChecksum>
       </Template>
       <Template>
         <Name>system_definitions.h</Name>
         <Path>Header Files/app/system_config/default</Path>
         <Checksum>AB73E4AD3E7CCF95CD8CCFBC1714B5EA</Checksum>
+        <ProjectFileChecksum>F6869064F30D9C8B1FB16BFA26472EF4</ProjectFileChecksum>
       </Template>
       <Template>
         <Name>system_exceptions.c</Name>
         <Path>Source Files/app/system_config/default</Path>
         <Checksum>C111969CA43D6CEA1E9E33A6164E7AE0</Checksum>
+        <ProjectFileChecksum>376C5DE1181FA4EF49A7159D91F93CE8</ProjectFileChecksum>
       </Template>
       <Template>
         <Name>bsp.c</Name>
         <Path>Source Files/app/system_config/default/bsp</Path>
         <Checksum>1D0F411EE1191D59E73E3C958ECB66B2</Checksum>
-        <ProjectFileChecksum>687DC3A05583877C53E5D365F2E05DF8</ProjectFileChecksum>
+        <ProjectFileChecksum>F2A7D78D2E523A63A3530F6EBDFECE49</ProjectFileChecksum>
       </Template>
       <Template>
         <Name>app.c</Name>
@@ -1923,22 +1929,25 @@
         <Name>bsp.h</Name>
         <Path>Header Files/app/system_config/default/bsp</Path>
         <Checksum>11159A07B16A6259FF9FF9047DD4C4F3</Checksum>
+        <ProjectFileChecksum>6E93E37F51A6B165B8A3C856C9E0E23F</ProjectFileChecksum>
       </Template>
       <Template>
         <Name>system_tasks.c</Name>
         <Path>Source Files/app/system_config/default</Path>
         <Checksum>84D560A15F51E604F5EAD9E29B965CB8</Checksum>
+        <ProjectFileChecksum>704FC1754EBB95403596C522ECBDC08D</ProjectFileChecksum>
       </Template>
       <Template>
         <Name>net_pres_enc_glue.c</Name>
         <Path>Source Files/app/system_config/default/framework/net/pres</Path>
         <Checksum>55E30EA7D4F2F3E990F9BF6632FE9134</Checksum>
-        <ProjectFileChecksum>14F66D8F99B79C9F24617B0156A7DF95</ProjectFileChecksum>
+        <ProjectFileChecksum>218AD22B7CEB21E7173470D826036F8B</ProjectFileChecksum>
       </Template>
       <Template>
         <Name>system_config.h</Name>
         <Path>Header Files/app/system_config/default</Path>
-        <Checksum>173777802ADA859E949029CF13AB2DC5</Checksum>
+        <Checksum>DFD5C38D9D150C563B4B9766BA793534</Checksum>
+        <ProjectFileChecksum>9A5F1E04862A51980A29BCF57ED9577C</ProjectFileChecksum>
       </Template>
       <Template>
         <Name>app.h</Name>
@@ -1947,20 +1956,22 @@
       <Template>
         <Name>system_interrupt.c</Name>
         <Path>Source Files/app/system_config/default</Path>
-        <Checksum>810D4433EDB81FBF221B5B966F5A4016</Checksum>
+        <Checksum>A07FF796AD9CE853CEE48CF81332B405</Checksum>
+        <ProjectFileChecksum>390E3F10F93B463EC46D2331CAC51739</ProjectFileChecksum>
       </Template>
       <Template>
         <Name>sys_clk_static.c</Name>
         <Path>Source Files/app/system_config/default/framework/system/clk/src</Path>
         <Checksum>CC45A61DC821F2A45FBFD5EB0F76DD59</Checksum>
+        <ProjectFileChecksum>BBF81F20F112963EED3512FF99DB316A</ProjectFileChecksum>
       </Template>
     </Templates>
     <CompilerItems>
       <C32>
-        <Include value="/home/jeffc/microchip/harmony/v2_01b/apps/tcpip/wolfmqtt_client/firmware/src"/>
-        <Include value="/home/jeffc/microchip/harmony/v2_01b/apps/tcpip/wolfmqtt_client/firmware/src/system_config/default"/>
-        <Include value="/home/jeffc/microchip/harmony/v2_01b/framework"/>
-        <Include value="/home/jeffc/microchip/harmony/v2_01b/apps/tcpip/wolfmqtt_client/firmware/src/system_config/default/framework"/>
+        <Include value="/Users/c14848/microchip/harmony/v2_01b/apps/tcpip/jcooper_exosite_mqtt_client/firmware/src"/>
+        <Include value="/Users/c14848/microchip/harmony/v2_01b/apps/tcpip/jcooper_exosite_mqtt_client/firmware/src/system_config/default"/>
+        <Include value="/Users/c14848/microchip/harmony/v2_01b/framework"/>
+        <Include value="/Users/c14848/microchip/harmony/v2_01b/apps/tcpip/jcooper_exosite_mqtt_client/firmware/src/system_config/default/framework"/>
         <Include value="../src/system_config/default/bsp"/>
         <Define value="HAVE_CONFIG_H"/>
         <Include value="../../../../../third_party/tcpip/wolfssl"/>
